@@ -1,0 +1,6 @@
+<mat-icon [matBadge]="basketList.length" matBadgeColor="warn" style="margin: 3rem;">shopping-cart</mat-icon>
+
+<button mat-flat-button color="primary" (click)="selectedCategory('all')">All</button>
+@for (category of categoriesButton; track $index) {
+    <button mat-flat-button color="primary" (click)="selectedCategory(category)">{{category}}</button>
+}

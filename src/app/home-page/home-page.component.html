@@ -1,0 +1,7 @@
+<app-header (selectedCategoryEvent)="($event)"></app-header>
+
+<div class="container">
+    @for (book of filteredData; track $index) {
+      <app-book-card [book]="book" (addBasketEvent)="addBasket($event)"></app-book-card>
+    }
+</div>
